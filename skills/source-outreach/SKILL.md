@@ -13,7 +13,7 @@ Find the sites AI trusts in the brand's market that don't name the brand yet, an
 
 1. Pick the brand: its domain from the person, or `list_brands`.
 2. `list_sources` with `owner=third_party`, `names_you=false` and `sort=priority`. Add `opening=true` to keep sites with an opening the brand could pitch. Filter by `source_type`, such as `review`, `media` or `community`, when the person wants one kind.
-3. For the top five, `get_source` with its `domain`: the cited pages, the questions they are cited for, and any related actions.
+3. For the top five, `get_source` with its `domain` and `actions_limit=5`: the cited pages, the questions they are cited for, and Heralded's related actions.
 4. `list_cited_pages` with `domain` shows which pages on a site AI cites and how they describe the brand and its competitors.
 5. `list_actions` with `subject=source:<domain>`: Heralded may already propose outreach for that site, with a draft. Use its draft rather than writing a second one.
 

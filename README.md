@@ -16,6 +16,7 @@ You need a Heralded account. Get one at [heralded.ai](https://heralded.ai).
 | `source-outreach` | "Which sites should we pitch to get mentioned?" |
 | `content-opportunities` | "What should we write to show up in AI answers?" |
 | `run-snapshot` | "Run a Snapshot of acme.com." |
+| `get-started` | "What can Heralded do here?" |
 
 ## Install
 

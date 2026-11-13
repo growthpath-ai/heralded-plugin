@@ -27,6 +27,6 @@ For each opportunity, a brief:
 - **The page to write or update**, its angle, and what it must cover to be the better source. Base it on what the cited pages cover and miss.
 - **Facts to use** from `get_brand_profile`. Never invent claims about the brand.
 
-`preview_content_language` gives the language to write in for a topic or page.
+For a page to update, `preview_content_language` with its `page_url` gives the language to write it in.
 
 Rank the briefs by demand and by how far the brand is behind.

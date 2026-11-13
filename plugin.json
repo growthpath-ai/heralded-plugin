@@ -51,19 +51,19 @@
             {
               "description": "Review the brand's AI visibility",
               "prompt": "How visible is my brand in AI answers this week?",
-              "tools_triggered": "list_brands, get_brand_overview, get_weekly_brief",
+              "tools_triggered": "list_brands, get_brand_overview, get_weekly_brief, get_week_timeline, list_actions",
               "expected_behavior": "Names the test brand and reports its Heralded Score with its range, and its Mentioned and Recommended figures with their changes. Unmeasured figures are reported as unknown, never as zero."
             },
             {
               "description": "Compare with competitors",
               "prompt": "Which competitors do AI answers recommend instead of us?",
-              "tools_triggered": "list_brands, list_competitors",
-              "expected_behavior": "Lists the competitors that rank above the test brand by Heralded Score, with their figures and share of voice next to the brand's own."
+              "tools_triggered": "list_brands, list_competitors, get_competitor",
+              "expected_behavior": "Ranks the competitors AI answers name for the test brand by Heralded Score, with share of voice, shows where the brand stands among them, and names the questions a leading competitor wins."
             },
             {
               "description": "Find sources to pitch",
               "prompt": "Which websites cited by AI don't mention us yet?",
-              "tools_triggered": "list_brands, list_sources",
+              "tools_triggered": "list_brands, list_sources, get_source",
               "expected_behavior": "Lists third-party sites that AI answers cite for the test brand's questions and that don't name the brand, with how often each is cited."
             },
             {
@@ -81,7 +81,7 @@
           ],
           "negative": [
             {
-              "description": "Another organization's data. The plugin reads only the workspace the person connected, so it should say it cannot see that brand. It may offer a Snapshot of the site, which needs Full access and the person's go-ahead.",
+              "description": "Another organization's brand. The plugin reads only the workspace the person connected, so it should say it can't see that brand's Heralded data. It may share public Heralded Leaderboards figures for the brand, and may offer a Snapshot, which needs Full access and the person's go-ahead.",
               "prompt": "Show me the AI visibility of nike.com."
             },
             {
@@ -99,7 +99,8 @@
       },
       "publication": {
         "release_notes": "First release: Heralded's AI visibility figures, competitors, sources, perception, actions and Snapshots, with six skills for reviews, explaining changes, competitor gaps, outreach, content briefs and Snapshots."
-      }
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
     }
   },
   "license": "MIT",

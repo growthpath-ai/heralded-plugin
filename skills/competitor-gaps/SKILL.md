@@ -21,8 +21,8 @@ For each competitor:
 
 - `get_competitor` with its `key` and `section=lost`: the questions where AI names the competitor and not the brand. `section=won` gives the reverse.
 - `get_competitor` with `section=pages`: the competitor pages AI cites. These are what earns them the answers.
-- `list_sources` with `names_you=false`, sorted by `citations`: sites AI cites that name rivals and not the brand.
-- For a question that matters, `list_answers` with `prompt` and `names` set to the competitor, then `get_answer` on one, to quote how AI frames them.
+- `list_sources` with `owner=third_party` and `names_you=false`, sorted by `citations`: third-party sites AI cites that don't name the brand.
+- For a question that matters, `list_answers` with `prompt` and `names` set to the competitor's name, then `get_answer` on one, to quote how AI frames them.
 
 ## Write
 
