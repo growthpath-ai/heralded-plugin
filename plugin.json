@@ -1,0 +1,107 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "heralded",
+  "version": "1.0.0",
+  "description": "Track your brand's visibility in AI answers and act on it: reviews, explained changes, competitor gaps, outreach and content briefs from Heralded.",
+  "author": {
+    "name": "GrowthPath",
+    "url": "https://heralded.ai"
+  },
+  "homepage": "https://heralded.ai",
+  "keywords": [
+    "ai visibility",
+    "aeo",
+    "geo",
+    "brand",
+    "marketing",
+    "seo"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Heralded",
+        "shortDescription": "Your brand's AI visibility",
+        "longDescription": "See how AI answers talk about your brand, and what to do about it. Ask for your Heralded Score and its trend, the questions where you are mentioned or recommended, the competitors AI recommends instead of you, the sources and pages AI cites, how AI describes your brand, and the actions Heralded proposes next. You can also run a Heralded Snapshot of any website.\n\nFor marketing and growth teams with a Heralded account. You sign in to Heralded and pick a workspace, and ChatGPT sees only the brands you can see there. Choose Read only or Full access when you connect: Full access lets ChatGPT run Snapshots, which use your workspace's Snapshot credits.",
+        "developerName": "GrowthPath",
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Review AI visibility",
+          "Explain a change",
+          "Find competitor gaps",
+          "Plan source outreach",
+          "Brief content",
+          "Run a Snapshot"
+        ],
+        "websiteURL": "https://heralded.ai",
+        "supportURL": "https://docs.heralded.ai/support",
+        "privacyPolicyURL": "https://heralded.ai/privacy/",
+        "termsOfServiceURL": "https://heralded.ai/terms/",
+        "defaultPrompt": [
+          "How visible is my brand in AI answers this week?",
+          "Which competitors do AI answers recommend instead of us?",
+          "What should I do next to improve my AI visibility?"
+        ],
+        "brandColor": "#B8740F",
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Review the brand's AI visibility",
+              "prompt": "How visible is my brand in AI answers this week?",
+              "tools_triggered": "list_brands, get_brand_overview, get_weekly_brief",
+              "expected_behavior": "Names the test brand and reports its Heralded Score with its range, and its Mentioned and Recommended figures with their changes. Unmeasured figures are reported as unknown, never as zero."
+            },
+            {
+              "description": "Compare with competitors",
+              "prompt": "Which competitors do AI answers recommend instead of us?",
+              "tools_triggered": "list_brands, list_competitors",
+              "expected_behavior": "Lists the competitors that rank above the test brand by Heralded Score, with their figures and share of voice next to the brand's own."
+            },
+            {
+              "description": "Find sources to pitch",
+              "prompt": "Which websites cited by AI don't mention us yet?",
+              "tools_triggered": "list_brands, list_sources",
+              "expected_behavior": "Lists third-party sites that AI answers cite for the test brand's questions and that don't name the brand, with how often each is cited."
+            },
+            {
+              "description": "Read how AI describes the brand",
+              "prompt": "How does AI describe our brand?",
+              "tools_triggered": "list_brands, get_perception",
+              "expected_behavior": "Summarizes how AI answers describe the test brand, with the claims and short quotes Heralded recorded."
+            },
+            {
+              "description": "See what needs the team",
+              "prompt": "What does Heralded suggest we do next?",
+              "tools_triggered": "list_brands, list_actions",
+              "expected_behavior": "Lists the test brand's open actions from Heralded, such as content to write or sites to reach, with each one's state."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Another organization's data. The plugin reads only the workspace the person connected, so it should say it cannot see that brand. It may offer a Snapshot of the site, which needs Full access and the person's go-ahead.",
+              "prompt": "Show me the AI visibility of nike.com."
+            },
+            {
+              "description": "Deleting data. No tool deletes anything, so it should say it can't and point to the Heralded app.",
+              "prompt": "Delete my brand and all its history from Heralded."
+            },
+            {
+              "description": "A request unrelated to AI visibility. The plugin should not be used.",
+              "prompt": "Book me a flight to Madrid next Friday."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Nothing is sold in ChatGPT. With Full access, running a Snapshot uses a free Snapshot or a Snapshot credit the workspace already holds, and Heralded says which one it used."
+      },
+      "publication": {
+        "release_notes": "First release: Heralded's AI visibility figures, competitors, sources, perception, actions and Snapshots, with six skills for reviews, explaining changes, competitor gaps, outreach, content briefs and Snapshots."
+      }
+    }
+  },
+  "license": "MIT",
+  "repository": "https://github.com/growthpath-ai/heralded-plugin"
+}

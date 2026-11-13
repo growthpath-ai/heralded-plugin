@@ -1,0 +1,17 @@
+{
+  "name": "heralded",
+  "displayName": "Heralded",
+  "version": "1.0.0",
+  "description": "Track your brand's visibility in AI answers and act on it: reviews, explained changes, competitor gaps, outreach and content briefs from Heralded.",
+  "author": { "name": "GrowthPath", "url": "https://heralded.ai" },
+  "homepage": "https://heralded.ai",
+  "repository": "https://github.com/growthpath-ai/heralded-plugin",
+  "license": "MIT",
+  "keywords": ["ai visibility", "aeo", "geo", "brand", "marketing"],
+  "icon": "./assets/logo.svg",
+  "documentationUrl": "https://docs.heralded.ai/assistants",
+  "supportUrl": "https://docs.heralded.ai/support",
+  "privacyPolicyUrl": "https://heralded.ai/privacy/",
+  "termsOfServiceUrl": "https://heralded.ai/terms/",
+  "mcpServers": "./mcp.json"
+}

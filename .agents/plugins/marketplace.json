@@ -1,0 +1,12 @@
+{
+  "name": "heralded",
+  "interface": { "displayName": "Heralded" },
+  "plugins": [
+    {
+      "name": "heralded",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Data & Analytics"
+    }
+  ]
+}

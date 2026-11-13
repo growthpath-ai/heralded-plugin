@@ -1,0 +1,12 @@
+{
+  "name": "heralded",
+  "owner": { "name": "GrowthPath", "url": "https://heralded.ai" },
+  "metadata": { "description": "The Heralded plugin: your brand's AI visibility, and what to do about it." },
+  "plugins": [
+    {
+      "name": "heralded",
+      "source": "./",
+      "description": "Track your brand's visibility in AI answers and act on it, with Heralded."
+    }
+  ]
+}
