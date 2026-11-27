@@ -30,7 +30,7 @@ Then connect Heralded: sign in to Heralded, pick the workspace, and choose **Rea
 
 ## What it sends and stores
 
-The plugin runs no code on your computer. It holds instructions (the skills in `skills/`) and the address of Heralded's MCP server, `https://api.heralded.ai/v1/mcp` (`mcp.json`).
+The plugin runs no code on your computer. It holds instructions (the skills in `skills/`) and the address of Heralded's MCP server, `https://api.heralded.ai/v1/mcp` (`mcp.json`, and `.mcp.json` for Claude).
 
 When you ask about your brand, your assistant calls that server with the request's parameters, such as a brand's domain or a filter, using the access you granted when you signed in. Heralded answers with your workspace's data: figures, questions, AI answers, competitors, sources, actions, reports and the names of the people on them. Your assistant's provider processes that data under its own terms. The plugin sends nothing anywhere else.
 
