@@ -1,7 +1,7 @@
 {
   "name": "heralded",
   "displayName": "Heralded",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Track your brand's visibility in AI answers and act on it: reviews, explained changes, competitor gaps, outreach and content briefs from Heralded.",
   "author": { "name": "GrowthPath", "url": "https://heralded.ai" },
   "homepage": "https://heralded.ai",
@@ -13,5 +13,5 @@
   "supportUrl": "https://docs.heralded.ai/support",
   "privacyPolicyUrl": "https://heralded.ai/privacy/",
   "termsOfServiceUrl": "https://heralded.ai/terms/",
-  "mcpServers": "./mcp.json"
+  "mcpServers": "./.mcp.json"
 }

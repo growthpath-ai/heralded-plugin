@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "heralded": {
+      "type": "http",
+      "url": "https://api.heralded.ai/v1/mcp"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "heralded",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Track your brand's visibility in AI answers and act on it: reviews, explained changes, competitor gaps, outreach and content briefs from Heralded.",
   "author": {
     "name": "GrowthPath",
@@ -98,7 +98,7 @@
         "commerce_description": "Nothing is sold in ChatGPT. With Full access, running a Snapshot uses a free Snapshot or a Snapshot credit the workspace already holds, and Heralded says which one it used."
       },
       "publication": {
-        "release_notes": "First release: Heralded's AI visibility figures, competitors, sources, perception, actions and Snapshots, with six skills for reviews, explaining changes, competitor gaps, outreach, content briefs and Snapshots."
+        "release_notes": "Adds a server file for Claude. Nothing changes in ChatGPT or Codex."
       },
       "onboardingSkill": "./skills/get-started/SKILL.md"
     }
